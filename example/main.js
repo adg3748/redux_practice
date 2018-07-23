@@ -25,3 +25,7 @@ const reducerImg = (state = '', action) => {
       return state;
   }
 }
+
+const combineReducers = reducers => (state={}, action) => Object.keys(reducers).reduce((nextState, key) => {
+},{});
+const rootReducer = combineReducers({ renderURL, reducerImg }); // ここの書き方謎

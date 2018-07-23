@@ -8,3 +8,7 @@
   `;
 })();
 
+const store = '';
+const actionSetURL = () => store.dispatch({ type: 'SET_URL' });
+const actionGetImg = () => store.dispatch({ type: 'GET_IMG' });
+const actionClear = () => store.dispatch({ type: 'CLEAR' });

@@ -4,5 +4,7 @@
   <button>Get</button>
   <button>Clear</button>
   <input />
+  <div id="render"></div>
   `;
 })();
+

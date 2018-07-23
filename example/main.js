@@ -8,7 +8,6 @@
   `;
 })();
 
-const store = '';
 const actionSetURL = () => store.dispatch({ type: 'SET_URL' });
 const actionGetImg = () => store.dispatch({ type: 'GET_IMG' });
 const actionClear = () => store.dispatch({ type: 'CLEAR' });
@@ -28,4 +27,9 @@ const reducerImg = (state = '', action) => {
 
 const combineReducers = reducers => (state={}, action) => Object.keys(reducers).reduce((nextState, key) => {
 },{});
-const rootReducer = combineReducers({ renderURL, reducerImg }); // ここの書き方謎
+const rootReducer = combineReducers({ reducerURL, reducerImg }); // オブジェクトに関数を放り込むと関数名と処理を自動でキーバリューにしてオブジェクト生成してくれる
+const store = Redux.createStore(rootReducer); // 1つに集約したReducerを以ってStoreを作成
+const provider = state => {} // stateを以ってhtml構築
+const render = () => { document.getElementById('render').innerHTML = provider(); } // providerで構築したhtmlを描画
+store.subscribe(render); // アクションがdispatchされるたびに呼ばれるイベントを登録する
+render(); // reducerIdのついたdivにhtmlを流し込む

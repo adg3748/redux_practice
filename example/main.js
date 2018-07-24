@@ -15,7 +15,7 @@ const actionClear = () => store.dispatch({ type: 'CLEAR' });
 const reducerURL = (state = '', action) => {
   switch (action.type) {
     case 'SET_URL':
-      return action.url;
+      return action.url; // ここの値はstore.getState().reducerURLで取得できる
     case 'CLEAR':
       return '';
     default:
@@ -46,7 +46,7 @@ const provider = state => {
       <div>state.reducerImg: ${state.reducerImg}</div>
     </div>
   `;
-  const imgView = state.reducerImg ? `<img src='${state.reducerURL}' />` : '';
+  const imgView = state.reducerImg ? `<img src='${state.reducerURL}' />` : ''; // getボタンでstore.getState().reducerImgがtrueになっていたら画像の挿入
   return `
     <div>
       ${stateView}

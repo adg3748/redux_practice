@@ -1,10 +1,10 @@
 (() => {
   document.body.innerHTML = `
-  <button>Set</button>
-  <button>Get</button>
-  <button>Clear</button>
-  <input />
-  <div id="render"></div>
+    <button onclick="actionSetURL(document.getElementById('url').value">Set</button>
+    <button onclick="actionGetImg()">Get</button>
+    <button onclick="actionClear()">Clear</button>
+    <input />
+    <div id="render"></div>
   `;
 })();
 

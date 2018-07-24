@@ -3,7 +3,7 @@
     <button onclick="actionSetURL(document.getElementById('url').value)">Set</button>
     <button onclick="actionGetImg()">Get</button>
     <button onclick="actionClear()">Clear</button>
-    <input />
+    <input id="url" />
     <div id="render"></div>
   `;
 })();

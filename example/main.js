@@ -39,7 +39,19 @@ const combineReducers = reducers => (state={}, action) => Object.keys(reducers).
 },{}); // combineReducersはreduxの関数、内部的な動きはわからんが中を触ることはなさそう
 const rootReducer = combineReducers({ reducerURL, reducerImg }); // オブジェクトに関数を放り込むと関数名と処理を自動でキーバリューにしてオブジェクト生成してくれる
 const store = Redux.createStore(rootReducer); // 1つに集約したReducerを以ってStoreを作成
-const provider = state => {} // stateを以ってhtml構築
+const provider = state => {
+  const stateView=`
+    <div>
+      <div>
+      </div>
+    </div>
+  `;
+  const imgView = '';
+  return `
+    <div>
+    </div>
+  `;
+} // stateを以ってhtml構築
 const render = () => { document.getElementById('render').innerHTML = provider(); } // providerで構築したhtmlを描画
 store.subscribe(()=>{
   console.log(store.getState());

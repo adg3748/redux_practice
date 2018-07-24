@@ -46,10 +46,11 @@ const provider = state => {
       <div>state.reducerImg: ${state.reducerImg}</div>
     </div>
   `;
-  const imgView = '';
+  const imgView = state.reducerImg ? `<img src='${state.reducerURL}' />` : '';
   return `
     <div>
       ${stateView}
+      ${imgView}
     </div>
   `;
 } // stateを以ってhtml構築

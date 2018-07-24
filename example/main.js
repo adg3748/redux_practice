@@ -42,17 +42,16 @@ const store = Redux.createStore(rootReducer); // 1つに集約したReducerを�
 const provider = state => {
   const stateView=`
     <div>
-      <div>
-      </div>
     </div>
   `;
   const imgView = '';
   return `
     <div>
+      ${stateView}
     </div>
   `;
 } // stateを以ってhtml構築
-const render = () => { document.getElementById('render').innerHTML = provider(); } // providerで構築したhtmlを描画
+const render = () => { document.getElementById('render').innerHTML = provider(store.getState()); } // providerで構築したhtmlを描画
 store.subscribe(()=>{
   console.log(store.getState());
   render();

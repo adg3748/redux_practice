@@ -42,6 +42,8 @@ const store = Redux.createStore(rootReducer); // 1つに集約したReducerを�
 const provider = state => {
   const stateView=`
     <div>
+      <div>state.reducerURL: ${state.reducerURL}</div>
+      <div>state.reducerImg: ${state.reducerImg}</div>
     </div>
   `;
   const imgView = '';

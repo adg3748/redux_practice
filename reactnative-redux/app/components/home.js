@@ -1,5 +1,9 @@
 'use strict';
 
-import React, { Component } from 'react';
+import React, { Component, View } from 'react';
 
-class Home extends Component {};
+export default class Home extends Component {
+  render() {
+    return null;
+  }
+};

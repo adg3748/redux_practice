@@ -8,9 +8,9 @@ import Home from './app/components/home'; // => [Function Home]
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <Provider store={store}>
         <Home />
-      </View>
+      </Provider>
     );
   }
 }

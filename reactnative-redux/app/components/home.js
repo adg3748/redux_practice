@@ -23,6 +23,10 @@ export default class Home extends Component {
     this.props.getData();
   }
   render() {
-    return null;
+    return (
+    <View>
+      <ActivityIndicator />
+    </View>
+    );
   }
 };

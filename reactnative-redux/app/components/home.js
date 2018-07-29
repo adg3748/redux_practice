@@ -14,7 +14,7 @@ import { connect } from 'react-redux';
 
 import * as Actions from '../actions';
 
-export default class Home extends Component {
+class Home extends Component {
   constructor(props){
     super(props);
     this.state={};
@@ -30,3 +30,16 @@ export default class Home extends Component {
     );
   }
 };
+
+function mapStateToProps(state,props) {
+  return {
+    loading: '',
+    data: '',
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(Actions, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

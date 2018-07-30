@@ -41,9 +41,14 @@ class Home extends Component {
       );
     }
     renderItem = ({item,index}) => {
-      <View>
+      <View style={styles.row}>
+        <Text style={styles.title}>
+        </Text>
+        <Text style={styles.description}>
+            {item.description}
+        </Text>
       </View>
-    }
+   }
   }
 };
 

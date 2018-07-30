@@ -23,19 +23,19 @@ class Home extends Component {
     this.props.getData();
   }
   render() {
-    if (this.props.loading){
+    if (false){
       return (
-        <View>
+        <View style={{backgroundColor: '#000000'}}>
           <ActivityIndicator />
         </View>
       );
     } else {
       return (
-        <View style={{}}>
+        <View style={{flex:1,backgroundColor: '#FF0000',paddingTop:20}}>
           <FlatList
             ref='listRef'
-            data={{}}
-            renderItem={{}}
+            data={this.props.data}
+            renderItem={this.renderItem}
             keyExtractor={(item, index) => index} />
         </View>
       );
@@ -45,7 +45,7 @@ class Home extends Component {
 
 function mapStateToProps(state,props) {
   return {
-    loading: '',
+    loading: 'false',
     data: '',
   };
 }

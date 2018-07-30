@@ -17,7 +17,7 @@ import * as Actions from '../actions';
 class Home extends Component {
   constructor(props){
     super(props);
-    this.state={};
+    this.state={}; // this.stateは空だがthis.props.getDataにはApp.jsから渡されたstoreが格納されている
   }
   conponentDidMount(){
   }
@@ -49,7 +49,7 @@ class Home extends Component {
 function mapStateToProps(state,props) {
   return {
     loading: false,
-    data: '',
+    data: ''
   };
 }
 

@@ -23,7 +23,7 @@ class Home extends Component {
     this.props.getData();
   }
   render() {
-    if (false){
+    if (this.props.loading){
       return (
         <View style={{backgroundColor: '#000000'}}>
           <ActivityIndicator />
@@ -40,12 +40,16 @@ class Home extends Component {
         </View>
       );
     }
+    renderItem = ({item,index}) => {
+      <View>
+      </View>
+    }
   }
 };
 
 function mapStateToProps(state,props) {
   return {
-    loading: 'false',
+    loading: false,
     data: '',
   };
 }

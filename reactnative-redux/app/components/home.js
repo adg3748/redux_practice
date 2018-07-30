@@ -23,11 +23,23 @@ class Home extends Component {
     this.props.getData();
   }
   render() {
-    return (
-    <View>
-      <ActivityIndicator />
-    </View>
-    );
+    if (this.props.loading){
+      return (
+        <View>
+          <ActivityIndicator />
+        </View>
+      );
+    } else {
+      return (
+        <View style={{}}>
+          <FlatList
+            ref='listRef'
+            data={{}}
+            renderItem={{}}
+            keyExtractor={(item, index) => index} />
+        </View>
+      );
+    }
   }
 };
 

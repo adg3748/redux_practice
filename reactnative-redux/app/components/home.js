@@ -20,7 +20,6 @@ class Home extends Component {
     this.state={};
   }
   conponentDidMount(){
-    this.props.getData();
   }
   render() {
     if (this.props.loading){

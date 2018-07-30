@@ -31,6 +31,7 @@ class Home extends Component {
     } else {
       return (
         <View style={{flex:1,backgroundColor: '#FF0000',paddingTop:20}}>
+          <Text>aaa</Text>
           <FlatList
             ref='listRef'
             data={this.props.data}
@@ -46,7 +47,7 @@ class Home extends Component {
   }
 };
 
-function mapStateToProps(state,props) {
+function mapStateToProps(state,props) { // stateにはreturnに記述したオブジェクトに加えてcombineReducersに記述したreducerが入っている
   return {
     loading: false,
     data: ''
@@ -58,3 +59,28 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
+
+const styles = StyleSheet.create({
+  activityIndicatorContainer:{
+      backgroundColor: "#fff",
+      alignItems: 'center',
+      justifyContent: 'center',
+      flex: 1,
+  },
+
+  row:{
+      borderBottomWidth: 1,
+      borderColor: "#ccc",
+      padding: 10
+  },
+
+  title:{
+      fontSize: 15,
+      fontWeight: "600"
+  },
+
+  description:{
+      marginTop: 5,
+      fontSize: 14,
+  }
+});

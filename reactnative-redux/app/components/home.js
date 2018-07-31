@@ -13,7 +13,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import * as Actions from '../actions';
-console.log(Actions,"actionにてexportした変数、関数をActionsオブジェクトとしてインポート");
 
 class Home extends Component {
   constructor(props){

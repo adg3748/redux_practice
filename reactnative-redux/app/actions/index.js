@@ -2,7 +2,7 @@ export const DATA_AVAILABLE = 'DATA_AVAILABLE';
 
 import Data from '../instructions.json';
 
-export function getData() {
+export const getData =  () => {
   return (dispatch) => {
     setTimeout(()=>{
       const data = Data.instructions;

@@ -20,7 +20,7 @@ class Home extends Component {
     this.state={
     }; // this.stateは空だがthis.props.getDataにはApp.jsから渡されたstoreが格納されている
   }
-  conponentDidMount(){
+  componentDidMount(){
   }
   render() {
     if (this.props.loading){

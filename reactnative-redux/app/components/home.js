@@ -31,9 +31,8 @@ class Home extends Component {
           {item.description}
       </Text>
     </View>
-  );
+  ); // こんな感じでJSXに渡す属性値としてのJSXを外に定義することもできる
   render() {
-    console.log(this.props,this.state);
     if (this.props.loading){
       return (
         <View style={{backgroundColor: '#333'}}>
@@ -54,14 +53,15 @@ class Home extends Component {
   }
 };
 
-function mapStateToProps(state,props) { // stateにはreturnに記述したオブジェクトに加えてcombineReducersに記述したreducerが入っている
+function mapStateToProps(state,props) { // stateに対してrootReducerでcombineしたreducerを適用することができる
   return {
     loading: state.dataReducer.loading,
     data: state.dataReducer.data
   }
+  // renderの返り値としてpropsに追加したいオブジェクトを記述
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch) { // importしたActionsをpropsに追加
   return bindActionCreators(Actions, dispatch);
 }
 

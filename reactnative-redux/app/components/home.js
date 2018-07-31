@@ -17,7 +17,8 @@ import * as Actions from '../actions';
 class Home extends Component {
   constructor(props){
     super(props);
-    this.state={}; // this.stateは空だがthis.props.getDataにはApp.jsから渡されたstoreが格納されている
+    this.state={
+    }; // this.stateは空だがthis.props.getDataにはApp.jsから渡されたstoreが格納されている
   }
   conponentDidMount(){
   }

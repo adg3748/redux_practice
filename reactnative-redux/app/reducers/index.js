@@ -6,9 +6,11 @@ let dataState = { data: [], loading:true };
 const dataReducer = (state = dataState, action) => {
   switch (action.type) {
     case DATA_AVAILABLE:
+      console.log('DATA_AVAILABLE');
       state = Object.assign({},state,{ data: action.data, loading:false});
       return state;
     default:
+      console.log('default');
       return state;
   }
 };

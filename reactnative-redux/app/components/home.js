@@ -26,6 +26,7 @@ class Home extends Component {
   renderItem = ({item,index}) => (
     <View style={{}}>
       <Text style={{}}>
+          {item.title}
       </Text>
       <Text style={{}}>
           {item.description}

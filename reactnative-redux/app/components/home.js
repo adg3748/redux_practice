@@ -24,10 +24,10 @@ class Home extends Component {
     this.props.getData();
   }
   renderItem = ({item,index}) => (
-    <View style={styles.row}>
-      <Text style={styles.title}>
+    <View style={{}}>
+      <Text style={{}}>
       </Text>
-      <Text style={styles.description}>
+      <Text style={{}}>
           {item.description}
       </Text>
     </View>
@@ -43,7 +43,6 @@ class Home extends Component {
     } else {
       return (
         <View style={{flex:1,backgroundColor: '#aaa',paddingTop:20}}>
-          <Text>aaa</Text>
           <FlatList
             ref='listRef'
             data={this.props.data}
@@ -72,26 +71,4 @@ export default connect(mapStateToProps, mapDispatchToProps)(Home);
 // 2つ目の()は取得したデータをpropsとして扱いたいcomponentを指定する
 
 const styles = StyleSheet.create({
-  activityIndicatorContainer:{
-      backgroundColor: "#fff",
-      alignItems: 'center',
-      justifyContent: 'center',
-      flex: 1,
-  },
-
-  row:{
-      borderBottomWidth: 1,
-      borderColor: "#ccc",
-      padding: 10
-  },
-
-  title:{
-      fontSize: 15,
-      fontWeight: "600"
-  },
-
-  description:{
-      marginTop: 5,
-      fontSize: 14,
-  }
 });
